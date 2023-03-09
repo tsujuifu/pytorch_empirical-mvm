@@ -1,0 +1,51 @@
+{
+    "type": "pretrain",
+    "temp": 0.05,
+    "data_dir": "_pretrain",
+    "dataset": "webvid-cc3m",
+    "train_yaml": {
+        "webvid2.5m": "_pretrain/train_webvid2.5m_10.yaml",
+        "cc3m": "_pretrain/train_cc3m_10.yaml"
+    },
+    "val_yaml": {
+        "webvid2.5m": "_pretrain/val_webvid2.5m.yaml",
+        "cc3m": "_pretrain/val_cc3m.yaml"
+    },
+    "size_part": {
+        "cc3m": 10,
+        "webvid2.5m": 10
+    },
+    "task": "pretrain",
+    "pretrain_tasks": [
+        "vtm",
+        "mlm",
+        "mvm"
+    ],
+    "pretrain_masks": [
+        "rm",
+        "bm"
+    ],
+    "mvm_target": "2d_feature",
+    "size_img": 224,
+    "size_frame": 4,
+    "size_txt": 32,
+    "img_transform": [
+        "img_rand_crop"
+    ],
+    "size_epoch": 10,
+    "size_batch": 20,
+    "lr": 5e-05,
+    "decay": 0.001,
+    "max_grad_norm": 1.0,
+    "use_checkpoint": true,
+    "deepspeed": true,
+    "vis_backbone_init": "3d",
+    "vis_backbone_lr_mul": 1,
+    "kinetics": 600,
+    "vis_backbone": "vidswin",
+    "vis_backbone_size": "base",
+    "txt_backbone": "bert-base-uncased",
+    "txt_backbone_embed_only": true,
+    "fusion_encoder": "bert-base-uncased",
+    "path_ckpt": ""
+}
