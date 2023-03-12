@@ -273,10 +273,8 @@ class VIOLET_Captioning(VIOLET_Base):
             if repetition_penalty!=1.0:
                 for i in range(batch_size):
                     for previous_token in set(input_ids[i].tolist()):
-                        if next_token_logits[i, previous_token]<0:
-                            next_token_logits[i, previous_token] *= repetition_penalty
-                        else:
-                            next_token_logits[i, previous_token] /= repetition_penalty
+                        if next_token_logits[i, previous_token]<0: next_token_logits[i, previous_token] *= repetition_penalty
+                        else: next_token_logits[i, previous_token] /= repetition_penalty
 
             if do_sample:
                 if temperature!=1.0: next_token_logits = next_token_logits/temperature
