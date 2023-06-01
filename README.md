@@ -1,6 +1,8 @@
 # [CVPR'23] An Empirical Study of End-to-End Video-Language Transformers with Masked Visual Modeling
 A PyTorch implementation of [EmpiricalMVM](https://tsujuifu.github.io/pubs/cvpr23_empirical-mvm.pdf)
 
+[Paper](https://tsujuifu.github.io/pubs/cvpr23_empirical-mvm.pdf) | [Slide](https://tsujuifu.github.io/slides/cvpr23_empirical-mvm.pdf) | [Video](https://youtu.be/T1qTkcMCq1k)
+
 <img src='_imgs/intro.jpg' width='60%' />
 
 ## Overview
