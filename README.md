@@ -24,7 +24,7 @@ This code is implemented under **Python 3.9**, [PyTorch 1.11](https://pypi.org/p
 Download [pretraining datasets](https://drive.google.com/drive/u/1/folders/1AR1NooeNVhx5o1Lt5oGLW7z_Ogu-ezgm) ([WebVid2.5M](https://m-bain.github.io/webvid-dataset) & [CC3M](https://github.com/google-research-datasets/conceptual-captions)) and pretrain via **single-node multi-gpu** distributed training.
 ```
 # edit "mvm_target" in args_pretrain.json # "3d_feature", "2d_feature", "2d_clip_feature", "pixel", "hog", "optical_flow", "depth", "vq"
-CUDA_VISIBLE_DEVICES='0,1,2,3,4,5,6,7' python -m torch.distributed.launch --nproc_per_node=8 --master_port=5566 main_pretrain_yaml.py --config _args/args_pretrain.json
+CUDA_VISIBLE_DEVICES='0,1,2,3,4,5,6,7' LOCAL_SIZE='8' python -m torch.distributed.launch --nproc_per_node=8 --master_port=5566 main_pretrain_yaml.py --config _args/args_pretrain.json
 ```
 We provide [ablation pretrained checkpoints](https://drive.google.com/drive/u/1/folders/1QgxhnRy8Pmyhg65kh0Q80DNn4UVkf5tA) (Table 1 & 6).
 
