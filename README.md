@@ -26,7 +26,7 @@ Download [pretraining datasets](https://drive.google.com/drive/u/1/folders/1AR1N
 # edit "mvm_target" in args_pretrain.json # "3d_feature", "2d_feature", "2d_clip_feature", "pixel", "hog", "optical_flow", "depth", "vq"
 CUDA_VISIBLE_DEVICES='0,1,2,3,4,5,6,7' python -m torch.distributed.launch --nproc_per_node=8 --master_port=5566 main_pretrain_yaml.py --config _args/args_pretrain.json
 ```
-We probvide [ablation pretrained checkpoints](https://drive.google.com/drive/u/1/folders/1QgxhnRy8Pmyhg65kh0Q80DNn4UVkf5tA) (Table 1 & 6).
+We provide [ablation pretrained checkpoints](https://drive.google.com/drive/u/1/folders/1QgxhnRy8Pmyhg65kh0Q80DNn4UVkf5tA) (Table 1 & 6).
 
 ### Downstream
 Download [downstream datasets](https://drive.google.com/drive/u/1/folders/1wtOsfrSFkGc4kdLQIwOWCEw6gS4aZSvv) and our [best pretrained checkpoint](https://drive.google.com/file/d/1KgC1rjXzjUVQWKpRT5-bhUDLUGAuoJgl).
